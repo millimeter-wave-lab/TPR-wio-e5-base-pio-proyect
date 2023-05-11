@@ -1,3 +1,5 @@
+Here the files from include and source were included, the original folders placed here were the ones generated in utilities folder in MX
+(lpm, misc, sequencer, trace and timer) and the ones from the middleware folder, SubGHz_Phy
 
 This directory is intended for project specific (private) libraries.
 PlatformIO will compile them to static libraries and link into executable file.

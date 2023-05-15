@@ -40,6 +40,7 @@
 /** @defgroup STM32WLXX_NUCLEO_RADIO_LOW_LEVEL RADIO LOW LEVEL
   * @{
   */
+ 
 
 /** @defgroup STM32WLXX_NUCLEO_RADIO_LOW_LEVEL_Exported_Types RADIO LOW LEVEL Exported Types
   * @{
@@ -52,6 +53,12 @@ typedef enum
   RADIO_SWITCH_RFO_LP = 2,
   RADIO_SWITCH_RFO_HP = 3,
 }BSP_RADIO_Switch_TypeDef;
+
+typedef enum
+{
+  RADIO_RFO_LP_MAXPOWER = 0,
+  RADIO_RFO_HP_MAXPOWER,
+} BSP_RADIO_RFOMaxPowerConfig_TypeDef;
 
 /**
   * @}
@@ -73,6 +80,15 @@ typedef enum
 
 #define RADIO_CONF_DCDC_NOT_SUPPORTED            0U
 #define RADIO_CONF_DCDC_SUPPORTED                1U
+
+
+#define RADIO_CONF_RFO_HP_MAX_22_dBm  ((int32_t) 22)
+#define RADIO_CONF_RFO_HP_MAX_20_dBm  ((int32_t) 20)
+#define RADIO_CONF_RFO_HP_MAX_17_dBm  ((int32_t) 17)
+#define RADIO_CONF_RFO_HP_MAX_14_dBm  ((int32_t) 14)
+#define RADIO_CONF_RFO_LP_MAX_15_dBm  ((int32_t) 15)
+#define RADIO_CONF_RFO_LP_MAX_14_dBm  ((int32_t) 14)
+#define RADIO_CONF_RFO_LP_MAX_10_dBm  ((int32_t) 10)
 /**
   * @}
   */ 
@@ -112,6 +128,7 @@ int32_t BSP_RADIO_ConfigRFSwitch(BSP_RADIO_Switch_TypeDef Config);
 int32_t BSP_RADIO_GetTxConfig(void);
 int32_t BSP_RADIO_IsTCXO(void);
 int32_t BSP_RADIO_IsDCDC(void);
+int32_t BSP_RADIO_GetRFOMaxPowerConfig(BSP_RADIO_RFOMaxPowerConfig_TypeDef Config);
 
 /**
   * @}

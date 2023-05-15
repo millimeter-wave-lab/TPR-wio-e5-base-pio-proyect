@@ -171,6 +171,23 @@ int32_t BSP_RADIO_IsDCDC(void)
   return RADIO_CONF_DCDC_SUPPORTED;
 }
 
+int32_t BSP_RADIO_GetRFOMaxPowerConfig(BSP_RADIO_RFOMaxPowerConfig_TypeDef Config)
+{
+  int32_t ret;
+
+  if(Config == RADIO_RFO_LP_MAXPOWER)
+  {
+    ret = RADIO_CONF_RFO_LP_MAX_15_dBm;
+  }
+  else
+  {
+    ret = RADIO_CONF_RFO_HP_MAX_22_dBm;
+  }
+
+  return ret;
+}
+
+
 /**
   * @}
   */

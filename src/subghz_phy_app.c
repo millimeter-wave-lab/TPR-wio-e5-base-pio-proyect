@@ -25,7 +25,7 @@
 #include "radio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -125,6 +125,8 @@ static void OnTxDone(void)
 static void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t LoraSnr_FskCfo)
 {
   /* USER CODE BEGIN OnRxDone */
+  uint8_t msg[] = "received a message";
+  HAL_UART_Transmit(&huart1,msg,sizeof(msg),10);
   /* USER CODE END OnRxDone */
 }
 

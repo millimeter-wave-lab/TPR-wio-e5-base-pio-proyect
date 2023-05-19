@@ -74,4 +74,4 @@ In order to add the wioE5 as a module compatible with STM32cube framework the fo
     "homepage": "https://github.com/STMicroelectronics/STM32CubeWL"
     }
 
-6.- Clone this repositoy to wherever you like and compile
+6.- Clone this repositoy to wherever you like and compilex

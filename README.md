@@ -87,11 +87,15 @@ In order to add the wioE5 as a module compatible with STM32cube framework, the f
 10.- Open ``STM32CubeProgrammer``, connect ST-LINK with the STM32 board to your PC, then click "Connect". The firt time you connect the devices it could give an error. Try again holding RESET Button of your device, then click "Connect" and release RESET Button.
 
 
-![Alt text](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png)
+![STM32CubeProgrammer Connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png)
+Image source: [seeed studio](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/)
 
 
 11.- On Option Bytes (OB), make sure the Read Out Protection is ``AA``, if it is shown as ``BB``, select ``AA`` and click "Apply". This step disable Read Out Protection.
 
-![Alt text](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png)
+
+![AA Read Out Protection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png)
+Image source: [seeed studio](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/)
+
 
 12.- Finally, with ST-LINK and STM32 board connected to your PC, on VSCode select "upload". If everything is OK, LoRa-E5 module default firmware is erased and the code from this base project is uploaded, the device can now be programmed using platformio!.
